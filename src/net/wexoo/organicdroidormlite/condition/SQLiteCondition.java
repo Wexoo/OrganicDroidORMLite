@@ -1,5 +1,5 @@
 /***
- * Copyright (C) 2011  wexoo
+ * Copyright (C) 2013 wexoo
  * p.weixlbaumer@gmail.com
  *
  * This program is free software: you can redistribute it and/or modify
@@ -24,45 +24,45 @@ package net.wexoo.organicdroidormlite.condition;
  * @author wexoo
  */
 public class SQLiteCondition {
-
+	
 	private LogicalOperator operator;
-
+	
 	private String condition;
-
+	
 	private Parenthesis parenthesis;
-
+	
 	public SQLiteCondition(final LogicalOperator operator, final String condition) {
 		this.operator = operator;
 		this.condition = condition;
-		this.parenthesis = Parenthesis.NONE;
+		parenthesis = Parenthesis.NONE;
 	}
-
+	
 	public SQLiteCondition(final LogicalOperator operator, final String condition, final Parenthesis parenthesis) {
 		this.operator = operator;
 		this.condition = condition;
 		this.parenthesis = parenthesis;
 	}
-
+	
 	public LogicalOperator getOperator() {
-		return this.operator;
+		return operator;
 	}
-
+	
 	public String getCondition() {
-		return this.condition;
+		return condition;
 	}
-
+	
 	public Parenthesis getParenthesis() {
-		return this.parenthesis;
+		return parenthesis;
 	}
-
+	
 	public void setOperator(final LogicalOperator operator) {
 		this.operator = operator;
 	}
-
+	
 	public void setCondition(final String condition) {
 		this.condition = condition;
 	}
-
+	
 	public void setParenthesis(final Parenthesis parenthesis) {
 		this.parenthesis = parenthesis;
 	}

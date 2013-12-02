@@ -1,5 +1,5 @@
 /***
- * Copyright (C) 2011  wexoo
+ * Copyright (C) 2013 wexoo
  * p.weixlbaumer@gmail.com
  *
  * This program is free software: you can redistribute it and/or modify
@@ -29,24 +29,23 @@ import net.wexoo.organicdroidormlite.entity.DatabaseEntity;
  * @author wexoo
  */
 public abstract class AbstractProxy {
-
+	
 	public abstract <T extends DatabaseEntity> void saveOrUpdateEntity(T entity, Class<T> entityClass);
-
+	
 	public abstract <T extends DatabaseEntity> void saveOrUpdateEntities(List<T> entities, Class<T> entityClass);
-
+	
 	@SuppressWarnings("unused")
 	private String buildConditionString(final SQLiteCondition... conditions) {
 		String conditionString = "";
-
+		
 		for (final SQLiteCondition cond : conditions) {
 			conditionString += " " + cond.getOperator().name() + " ";
-			if (cond.getParenthesis().equals(Parenthesis.OPEN)) {
-				conditionString += cond.getParenthesis().toString();
-			}
+			
+			if (cond.getParenthesis().equals(Parenthesis.OPEN)) conditionString += cond.getParenthesis().toString();
+			
 			conditionString += cond.getCondition();
-			if (cond.getParenthesis().equals(Parenthesis.CLOSE)) {
-				conditionString += cond.getParenthesis().toString();
-			}
+			
+			if (cond.getParenthesis().equals(Parenthesis.CLOSE)) conditionString += cond.getParenthesis().toString();
 		}
 		return conditionString;
 	}

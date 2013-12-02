@@ -1,5 +1,5 @@
 /***
- * Copyright (C) 2011  wexoo
+ * Copyright (C) 2013 wexoo
  * p.weixlbaumer@gmail.com
  *
  * This program is free software: you can redistribute it and/or modify
@@ -24,17 +24,17 @@ package net.wexoo.organicdroidormlite.condition;
  * @author wexoo
  */
 public enum Parenthesis {
-
+	
 	OPEN("("),
 	CLOSE(")"),
 	NONE("");
-
+	
 	private String name;
-
+	
 	private Parenthesis(final String name) {
 		this.name = name;
 	}
-
+	
 	@Override
 	public String toString() {
 		return name;

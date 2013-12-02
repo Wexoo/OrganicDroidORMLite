@@ -1,5 +1,5 @@
 /***
- * Copyright (C) 2011 wexoo
+ * Copyright (C) 2013 wexoo
  * p.weixlbaumer@gmail.com
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,11 +19,13 @@
 package net.wexoo.organicdroidormlite.condition;
 
 /**
+ * Logical operators to link db conditions
+ * 
  * @author wexoo
  */
 public enum LogicalOperator {
-
-   WHERE,
-   AND,
-   OR;
+	
+	WHERE,
+	AND,
+	OR;
 }

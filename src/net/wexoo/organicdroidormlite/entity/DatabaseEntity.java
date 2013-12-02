@@ -1,5 +1,5 @@
 /***
- * Copyright (C) 2011  wexoo
+ * Copyright (C) 2013 wexoo
  * p.weixlbaumer@gmail.com
  *
  * This program is free software: you can redistribute it and/or modify
@@ -25,17 +25,17 @@ import com.j256.ormlite.field.DatabaseField;
  * @author wexoo
  */
 public class DatabaseEntity {
-
-   public static final String ID_COLUMN = "id";
-
-   @DatabaseField(generatedId = true, columnName = ID_COLUMN)
-   private Integer id;
-
-   public Integer getId() {
-      return id;
-   }
-
-   public void setId(Integer id) {
-      this.id = id;
-   }
+	
+	public static final String ID_COLUMN = "id";
+	
+	@DatabaseField(generatedId = true, columnName = ID_COLUMN)
+	private Integer id;
+	
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
 }
